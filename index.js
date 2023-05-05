@@ -25,6 +25,13 @@ bot.on('message', message => { //when message recieved
     const command = args.shift().toLowerCase()
 
     //Start of responses:
+    
+    // --- turn bot off!! ---
+    if(command === 'logoff'){
+        message.channel.send(":wave: **CeliaBot is logging off for a bit! Be back soon.** :wave:");
+        bot.off()
+        return;
+    }// ------------------
 
     if(command === 'reactwhy'){
         message.channel.send("", {files: ["https://i.kym-cdn.com/photos/images/facebook/000/680/518/40f.jpg"]});
@@ -52,13 +59,6 @@ bot.on('message', message => { //when message recieved
 
     if(command === 'feedchickens'){
         message.channel.send("", {files: ["https://cdn.discordapp.com/attachments/755454758369755336/1020198106672939008/8mb.video-lo8-RvlsJvg4.mp4"]});
-    }
-
-    //turn bot off!!
-    if(command === 'logoff'){
-        message.channel.send(":wave: **CeliaBot is logging off for a bit! Be back soon.** :wave:");
-        bot.off()
-        return;
     }
 
     if(command === 'reactcrewmate'){
@@ -97,30 +97,26 @@ bot.on('message', message => { //when message recieved
         message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/763516655837380608/764172024984895508/image0.gif']});
     }
 
-    if(command === 'ejectcc'){
+    if(command === 'ejectcc'){ //eject from spaceship
         message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/709232303184019466/775902910240129084/eject.gif']});
     }
 
-    if(command === 'ejectben'){
+    if(command === 'ejectben'){ //eject from spaceship
         message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/763865470595629086/775905896643166228/eject.gif']});
+    }
+
+    if(command === 'ejectliam'){ //eject from spaceship
+        message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/709232303184019466/775904061823647764/eject.gif']});
+    }
+
+    if(command === 'ejectjulia'){ //eject from spaceship
+        message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/709232303184019466/775904941281771580/eject.gif']});
     }
 
     if(command === 'newfriend'){
         message.channel.send({files: ['https://img.ifunny.co/images/365aa51479b145c85624f6982c191319294233ff0fcb8f7c4f9e5ab9e5c913dd_1.jpg']});
     }
-
-    if(command === 'ejectliam'){
-        message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/709232303184019466/775904061823647764/eject.gif']});
-    }
-
-    if(command === 'ejectjulia'){
-        message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/709232303184019466/775904941281771580/eject.gif']});
-    }
-
-    if(command === 'gifkill'){
-        message.channel.send('', {files: ['https://media1.tenor.com/images/ef4993b593954811a0c0a1c98af698a3/tenor.gif?itemid=16399941']});
-    }
-
+  
     if(command === 'gifsteve'){
         message.channel.send('', {files: ['https://cdn.discordapp.com/attachments/758354023270842448/764498772796637274/image0.gif']});
     }
@@ -135,10 +131,6 @@ bot.on('message', message => { //when message recieved
 
     if(command === 'cowboy'){
         message.channel.send('',{files: ['https://cdn.discordapp.com/attachments/763516655837380608/764169043883982848/image0.gif']});
-    }
-
-    if(command === 'suicide'){
-        message.channel.send('',{files: ['https://cdn.discordapp.com/attachments/763516655837380608/775532586470604820/JEBkBgZbKhpOZ7td.gif']});
     }
 
     if(command === 'unoreverse'){
@@ -188,7 +180,7 @@ bot.on('message', message => { //when message recieved
         }
     }
 
-    if(command === 'facts'){
+    if(command === 'insults'){
         number = Math.floor((Math.random() * 10) + 1)
         if(number === 1){
             message.channel.send(' You\'re as useless as the "ueue" in queue.');
@@ -222,7 +214,7 @@ bot.on('message', message => { //when message recieved
         }
     }
 
-    if(command === 'pickmeup'){
+    if(command === 'compliments'){
         number = Math.floor((Math.random() * 8) + 1)
         if(number === 1){
             message.channel.send('Your smile could light up this whole world. :)');
@@ -307,7 +299,7 @@ bot.on('message', message => { //when message recieved
             message.channel.send('Bank heist plan: Step 1. Approach bank teller. Step 2. __________.');
         }
         if(number === 2){
-            message.channel.send('The greatest trick the Devil ever played was __________.');
+            message.channel.send('The greatest trick the Dare Devil ever performed was __________.');
         }
         if(number === 3){
             message.channel.send('The most intriguing phrase to find in a dating profile:');
@@ -316,7 +308,7 @@ bot.on('message', message => { //when message recieved
             message.channel.send('If a candidate did this, they would instantly win my vote.');
         }
         if(number === 5){
-            message.channel.send('A sure sign your co-worker is a robot.');
+            message.channel.send('A sure sign your co-worker is a robot:');
         }
         if(number === 6){
             message.channel.send('What sign was left off of the zodiac?');
@@ -373,7 +365,7 @@ bot.on('message', message => { //when message recieved
             message.channel.send('The worst thing to hear after saying “I love you”:');
         }
         if(number === 24){
-            message.channel.send('What God was thinking when he invented testicles:');
+            message.channel.send('What God was thinking when he invented giraffes:');
         }
         if(number === 25){
             message.channel.send('The one question science may never answer:');
@@ -388,13 +380,13 @@ bot.on('message', message => { //when message recieved
             message.channel.send('Haunted House rules: 1. Do not touch the actors 2. __________.');
         }
         if(number === 29){
-            message.channel.send('What is a sexy vampire\’s biggest turnoff?');
+            message.channel.send('What do vampires do on weekends?');
         }
         if(number === 30){
             message.channel.send('The only thing worse than watching __________ is watching it in slow-motion.');
         }
         if(number === 31){
-            message.channel.send('A dangerous marital sex game: you tie yourself to the bed and they __________.');
+            message.channel.send('_____ is ALWAYS necessary for secret missions.');
         }
         if(number === 32){
             message.channel.send('The name of a start-up company that\’s doomed to fail:');
